@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Altan Mendi - Authentic Ethiopian Mendi Delivered</title>
+  
+  <link rel="stylesheet" href="styles/altan-main.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="nav-container">
+      
+      <!-- Logo - Moved more to the left -->
+      <div class="logo">
+        <img src="images/main-page-images/Altan-mendi-logo.jpg" alt="Altan Mendi Logo" class="logo-img">
+        <div class="logo-text">
+          <span class="altan">Altan</span>
+          <span class="mendi">Mendi</span>
+        </div>
+      </div>
+
+      <!-- Search Bar - In the middle -->
+      <div class="search-container">
+        <input type="text" id="search-input" class="search-bar" placeholder="Search menu (e.g. Chicken Mendi, Beef...)">
+        <button class="search-btn">
+          🔍
+        </button>
+      </div>
+
+      <!-- Menu Links -->
+      <div class="nav-links">
+        <a href="altan-main.html" class="nav-link active">Home</a>
+        <a href="/menu" class="nav-link">Menu</a>
+        <a href="/order" class="nav-link highlight">Order Now</a>
+        <a href="/about" class="nav-link">About Us</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </div>
+
+      <!-- Right Side -->
+      <div class="nav-right">
+        <!-- Cart Icon with Number -->
+        <a href="/cart" class="cart-link" title="View Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" class="cart-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+            <path stroke-linecap="round" stroke-linejoin="round" 
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          <span id="cart-count" class="cart-count">0</span>
+        </a>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <span id="theme-icon">☀️</span>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn">☰</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Authentic <span class="highlight-text">Mendi</span><br>Delivered Hot to Your Door</h1>
+      <p class="hero-subtitle">Tender chicken or juicy beef served over fragrant rice.<br>Traditional taste, modern convenience — right in Addis Ababa.</p>
+      
+      <div class="hero-buttons">
+        <a href="/order" class="btn btn-primary">Order Now</a>
+        <a href="/menu" class="btn btn-secondary">View Menu</a>
+      </div>
+
+      <div class="trust-badges">
+        <span>🚀 Fast Delivery</span>
+        <span>🔥 Freshly Prepared</span>
+        <span>💯 100% Authentic</span>
+      </div>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="hero-image">
+      <img src="images/main-page-images/altan-main-promo-image.jpg" 
+           alt="Delicious Altan Mendi - Chicken and Beef">
+    </div>
+  </header>
+
+  <!-- Quick Info Section -->
+  <section class="quick-info">
+    <div class="info-card">
+      <h3>Chicken Mendi</h3>
+      <p>Tender chicken with fragrant rice and spices</p>
+    </div>
+    <div class="info-card">
+      <h3>Beef Mendi</h3>
+      <p>Juicy beef chunks on a bed of perfectly cooked rice</p>
+    </div>
+    <div class="info-card">
+      <h3>Family Pack</h3>
+      <p>Perfect for sharing with loved ones</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
