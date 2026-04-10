@@ -129,6 +129,7 @@
 .info-card p {
   color: #52525b;
   font-size: 1.05rem;
+  text-decoration: none;
 }
 
 .dark .info-card p {
@@ -151,4 +152,7 @@
   .nav-container {
     padding: 1rem 1.5rem;
   }
+}
+.food-link{
+  text-decoration: none;
 }
