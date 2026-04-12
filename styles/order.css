@@ -1,0 +1,212 @@
+/* ====================== ORDER NOW PAGE ====================== */
+
+.order-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 3rem 5rem;
+}
+
+.order-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* LEFT SIDE - Cart Section */
+.cart-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.dark .cart-section {
+  background: #18181b;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #18181b;
+}
+
+.dark .section-title {
+  color: #ffffff;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ====================== FOOD CARD (Used in Cart) ====================== */
+
+.food-card {
+  display: flex;
+  gap: 1.2rem;
+  background: #f8fafc;
+  padding: 1.2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.dark .food-card {
+  background: #27272a;
+}
+
+.food-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(217, 119, 6, 0.25);
+}
+
+.food-image img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.food-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #18181b;
+}
+
+.dark .food-name {
+  color: #f1f5f9;
+}
+
+.food-description {
+  color: #52525b;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.dark .food-description {
+  color: #a1a1aa;
+}
+
+.food-price-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #d97706;
+}
+
+.add-to-cart-btn {
+  padding: 10px 20px;
+  background-color: #d97706;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #b45309;
+  transform: translateY(-2px);
+}
+
+/* RIGHT SIDE - Summary Box */
+.summary-box {
+  background: white;
+  padding: 2.2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 2rem;
+}
+
+.dark .summary-box {
+  background: #18181b;
+}
+
+.summary-box h3 {
+  margin: 0 0 1.8rem 0;
+  font-size: 1.7rem;
+  color: #d97706;
+  text-align: center;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+  font-size: 1.1rem;
+  color: #52525b;
+}
+
+.dark .summary-row {
+  color: #a1a1aa;
+}
+
+.summary-divider {
+  border: none;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 1rem 0;
+}
+
+.dark .summary-divider {
+  background: #3f3f46;
+}
+
+.total-row {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #18181b;
+}
+
+.dark .total-row {
+  color: #ffffff;
+}
+
+.calculate-btn {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 16px;
+  font-size: 1.25rem;
+  color: white;
+  background-color: #d97706;
+  border-radius: 40px;
+  font-weight: bold;
+  border: none;
+}
+.calculate-btn:hover{
+  background-color: #b45309;
+  transform: translateY(-2px);
+   transition: all 0.3s ease;
+}
+
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .order-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .summary-box {
+    position: static;
+  }
+}
