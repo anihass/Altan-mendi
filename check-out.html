@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/navigation-bar.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Altan Mandi</title>
+  <link rel="stylesheet" href="styles/navigation-bar.css">
+  <link rel="stylesheet" href="styles/check-out.css">   <!-- Nechw file -->
 </head>
-<body>
-    <div class="navbar">
+<body >
+
+   <div class="navbar">
     <div class="nav-container">
       
       <!-- Logo - Moved more to the left -->
@@ -29,8 +31,8 @@
 
       <!-- Menu Links -->
       <div class="nav-links">
-        <a href="altan-main.html" class="nav-link ">Home</a>
-        <a href="menu.html" class="nav-link ">Menu</a>
+        <a href="altan-main.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
         <a href="order.html" class="nav-link highlight">Order Now</a>
         <a href="/about" class="nav-link">About Us</a>
         <a href="check-out.html" class="nav-link active">Check out</a>
@@ -51,9 +53,78 @@
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
           <span id="theme-icon">☀️</span>
         </button>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn">☰</button>
       </div>
     </div>
   </div>
-    
+
+  <main class="checkout-container">
+    <div class="checkout-content">
+
+      <!-- LEFT SIDE: List of Ordered Products -->
+      <section class="order-items-section">
+        <h2 class="section-title">Your Order</h2>
+        
+        <div class="order-items" id="order-items">
+
+          <!-- Example Product (using your previous food-card style) -->
+          <div class="food-card checkout-card">
+            <div class="food-image">
+              <img src="images/menu-page-images/chiken-mendi/chiken-mendi-with-rice.jpg" 
+                   alt="Chicken Mendi">
+            </div>
+            <div class="food-info">
+              <h3 class="food-name">Chicken Mendi</h3>
+              <p class="food-description">Fragrant basmati rice with tender chicken, slow-cooked with spices.</p>
+              <div class="food-price-qty">
+                <span class="food-price">$8.99</span>
+                <span class="quantity">× 2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- You can add more items here or dynamically with JS -->
+          
+        </div>
+      </section>
+
+      <!-- RIGHT SIDE: Success / Confirmation Box -->
+      <aside class="confirmation-section">
+        <div class="confirmation-box">
+          
+          <!-- Green Checkmark Circle -->
+          <div class="success-icon">
+            <div class="check-circle">
+              <span class="checkmark">✓</span>
+            </div>
+          </div>
+
+          <h2 class="success-title">Order Placed Successfully!</h2>
+          <p class="success-message">
+            Thank you for ordering from Altan Mandi.<br>
+            Your food is being prepared.
+          </p>
+
+          <!-- Order Summary in confirmation box -->
+          <div class="mini-summary">
+            <div class="summary-row">
+              <span>Total Amount</span>
+              <span class="total-amount">$27.98</span>
+            </div>
+          </div>
+
+          <!-- Cancel Order Button -->
+          <button class="btn btn-cancel" id="cancel-order-btn">
+            Cancel Order
+          </button>
+
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
 </body>
 </html>
