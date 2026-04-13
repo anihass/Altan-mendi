@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Altan Mendi - Authentic Ethiopian Mendi</title>
+  <link rel="stylesheet" href="styles/navigation-bar.css">
+  <link rel="stylesheet" href="styles/about-us.css">
+  
+</head>
+<body>
+  <div class="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="images/main-page-images/Altan-mendi-logo.jpg" alt="Altan Mendi Logo" class="logo-img">
+        <div class="logo-text">
+          <span class="altan">Altan</span>
+          <span class="mendi">Mendi</span>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-container">
+        <input type="text" id="search-input" class="search-bar" placeholder="Search menu (e.g. Chicken Mendi, Beef...)">
+        <button class="search-btn">🔍</button>
+      </div>
+
+      <!-- Menu Links -->
+      <div class="nav-links">
+        <a href="altan-main.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="order.html" class="nav-link highlight">Order Now</a>
+        <a href="about-us.html" class="nav-link active">About Us</a>
+        <a href="check-out.html" class="nav-link">Check out</a>
+      </div>
+
+      <!-- Right Side -->
+      <div class="nav-right">
+        <a href="cart.html" class="cart-link" title="View Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" class="cart-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          <span id="cart-count" class="cart-count">0</span>
+        </a>
+
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <span id="theme-icon">☀️</span>
+        </button>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn">☰</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Hero -->
+  <header class="about-hero">
+    <div class="hero-content">
+      <h1 class="about-title">Altan Mendi</h1>
+      <p class="about-subtitle">
+        Bringing the rich, authentic taste of traditional <span class="highlight-text">Mendi</span> straight to your table in Addis Ababa.
+      </p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Left Text -->
+        <div class="about-text">
+          <h2>Welcome to Altan Mendi</h2>
+            <p>
+                Altan Mendi is a modern food-ordering website designed to bring the rich taste of <strong>Mendi</strong> — a traditional fragrant rice dish served with tender, perfectly spiced meat — straight to your table.
+            </p>
+            
+            <p>
+                Whether you crave juicy <strong>Chicken Mendi</strong> or succulent <strong>Beef Mendi</strong>, we make it simple to browse, customize your spices and sides, and order your favorite plate online with fast delivery.
+            </p>
+            
+            <p>
+                Rooted in authentic Ethiopian and Arabian culinary traditions, every plate is prepared fresh with love, using quality ingredients and time-honored recipes passed down through generations.
+            </p>
+          <div class="about-values">
+            <div class="value-item">
+              <span class="value-icon">🔥</span>
+              <strong>Freshly Prepared</strong>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">🚀</span>
+              <strong>Fast & Reliable Delivery</strong>
+            </div>
+            <div class="value-item">
+              <span class="value-icon">💯</span>
+              <strong>100% Authentic Taste</strong>
+            </div>
+          </div>
+
+          <a href="order.html" class="btn btn-primary">Order Your Mendi Now</a>
+        </div>
+
+        <!-- Right Image -->
+        <div class="about-image">
+          <img src="images/main-page-images/altan-main-promo-image.jpg" alt="Delicious Chicken and Beef Mendi">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Promise / Why Us -->
+  <section class="promise-section">
+    <div class="container">
+      <h2 class="section-title">Why Choose Altan Mendi?</h2>
+      <div class="promise-grid">
+        <div class="promise-card">
+          <h3>Traditional Recipe</h3>
+          <p>Our Mendi follows authentic preparation methods — slow-cooked tender meat over fragrant, spiced rice.</p>
+        </div>
+        <div class="promise-card">
+          <h3>Customizable</h3>
+          <p>Choose your protein, spice level, and add your favorite sides like salad, yogurt, or extra sauce.</p>
+        </div>
+        <div class="promise-card">
+          <h3>Hot & Fresh</h3>
+          <p>Every order is prepared fresh when you place it and delivered piping hot to your door.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

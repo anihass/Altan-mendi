@@ -1,0 +1,159 @@
+/* styles/about.css */
+
+.about-hero {
+  height: 55vh;
+  min-height: 420px;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
+              url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.about-title {
+  font-size: 4.2rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.about-subtitle {
+  font-size: 1.45rem;
+  color: #f3e8d8;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-section {
+  padding: 5rem 3rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.8rem;
+  color: #d97706;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+  color: #52525b;
+}
+
+.dark .about-text p {
+  color: #a1a1aa;
+}
+
+.about-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.value-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.15rem;
+}
+
+.value-icon {
+  font-size: 1.6rem;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.04);
+}
+
+/* Promise Section */
+.promise-section {
+  padding: 4rem 3rem 6rem;
+  background: #f8f1e3;
+}
+
+.dark .promise-section {
+  background: #1f1f1f;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: #d97706;
+}
+
+.promise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.promise-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.dark .promise-card {
+  background: #18181b;
+}
+
+.promise-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 20px 45px rgba(217, 119, 6, 0.25);
+}
+
+.promise-card h3 {
+  color: #d97706;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.promise-card p {
+  color: #52525b;
+}
+
+.dark .promise-card p {
+  color: #a1a1aa;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .about-hero {
+    height: 45vh;
+  }
+  
+  .about-title {
+    font-size: 3.2rem;
+  }
+}
