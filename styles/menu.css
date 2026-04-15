@@ -115,6 +115,11 @@ body{
 .more-foods-container {
     max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;   /* space between columns */
+    row-gap: 20px; 
+    
 }
 
 .section-title {
@@ -128,7 +133,7 @@ body{
 }
 
 /* Food Card Styles */
-.food-card {
+.food-card{
     background-color: white;
     border-radius: 16px;
     overflow: hidden;
@@ -141,6 +146,9 @@ body{
 .food-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.food-card:hover .food-image img {
+    transform: scale(1.08);
 }
 
 .food-image {
@@ -155,11 +163,6 @@ body{
     object-fit: cover;
     transition: transform 0.4s ease;
 }
-
-.food-card:hover .food-image img {
-    transform: scale(1.08);
-}
-
 .food-info {
     padding: 20px;
 }
@@ -194,7 +197,21 @@ body{
     font-weight: 700;
     color: #d97706;
 }
-
+.add-quantity-btn{
+  background-color: #d97706;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+}
+.add-quantity-btn:hover {
+    background-color: #b45309;
+    transform: scale(1.05);
+     transition: 0.2s ;
+   
+}
 .add-to-cart-btn {
     background-color: #d97706;
     color: white;
@@ -213,6 +230,7 @@ body{
 .add-to-cart-btn:hover {
     background-color: #b45309;
     transform: scale(1.05);
+   
 }
 
 .add-to-cart-btn:active {
