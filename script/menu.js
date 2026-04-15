@@ -22,9 +22,7 @@ export function menu(){
             </div>
         </div>  `;
     } 
-)
-console.log(foodList);
-
+);
 document.querySelector('.js-food-card').innerHTML = foodList;
 };
 menu();
