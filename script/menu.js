@@ -1,6 +1,6 @@
 import { foods } from "./data/foods.js";   
 let foodList = '';
-export function menu(){
+export function generateMenu(){
     
     foods.forEach((food)=>{
     
@@ -14,7 +14,6 @@ export function menu(){
                 <p class="food-description">${food.description}</p>
                 <div class="food-price-add">
                     <span class="food-price">$${((food.priceCent)/100).toFixed(2)}</span>
-                    <button class="add-quantity-btn">+${food.quantity || 1}</button>
                     <button class="add-to-cart-btn">
                         <span>Add to Cart</span>
                     </button>
@@ -24,7 +23,18 @@ export function menu(){
     } 
 );
 document.querySelector('.js-food-card').innerHTML = foodList;
+document.querySelectorAll('.add-to-cart-btn').forEach((button)=>{
+
+    button.addEventListener('click', (event)=>{
+        console.log(foods.id);
+        
+    });
+
+});
+
+
+
 };
-menu();
+generateMenu();
 
 
