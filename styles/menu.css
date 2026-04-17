@@ -197,21 +197,7 @@ body{
     font-weight: 700;
     color: #d97706;
 }
-.add-quantity-btn{
-  background-color: #d97706;
-  color: white;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 50%;
-  border: none;
-  font-size: 20px;
-}
-.add-quantity-btn:hover {
-    background-color: #b45309;
-    transform: scale(1.05);
-     transition: 0.2s ;
-   
-}
+
 .add-to-cart-btn {
     background-color: #d97706;
     color: white;

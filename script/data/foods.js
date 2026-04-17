@@ -1,3 +1,4 @@
+
 export const foods = [{
     id:1,
     image:"images/menu-page-images/chiken-mendi/chiken-mendi-with-rice.jpg",
@@ -61,4 +62,4 @@ export const foods = [{
     description:"crafted for sharing and enjoying together!!",
     priceCent:1450,
     quantity:1,
-}]
+}];
