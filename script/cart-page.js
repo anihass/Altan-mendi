@@ -5,15 +5,15 @@ console.log(cart);
 
 
 let cartList = '';
-let machingFood;
+
 
 cart.forEach((food)=>{
     const foodId = food.id;
-
-   
+    let machingFood;
     foods.forEach((foodinfo)=>{
         if ( foodinfo.id === foodId){
             machingFood = foodinfo;
+            console.log(machingFood);
         }
     });
 

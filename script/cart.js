@@ -6,10 +6,10 @@ export let cart = JSON.parse(localStorage.getItem('cart'));
 
 if (!cart){
     cart =  cart =[{
-    id:1,
+    id:'1',
     quantity:1
 },{
-    id:2,
+    id:'2',
     quantity:1
 }]
 };
