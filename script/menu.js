@@ -1,8 +1,8 @@
-import { cart,addToCart,saveTolocalStorage } from "./cart.js";
+import { addToCart } from "./cart.js";
 import { foods } from "./data/foods.js";   
 let foodList = '';
 
-export function generateMenu(){
+
     foods.forEach((food)=>{
     foodList += `
     <div class="food-card">
@@ -28,11 +28,10 @@ document.querySelectorAll('.add-to-cart-btn').forEach((button)=>{
         const foodId = button.dataset.foodId;
         console.log(foodId);
         addToCart(foodId);  
-        saveTolocalStorage();   
+        
     });
 });
-};
-generateMenu();
+
 
 
 

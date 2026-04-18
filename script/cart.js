@@ -1,21 +1,26 @@
-export let cart;
 import { foods } from "./data/foods.js";
- cart =[{
-    id:1,
-    image:"images/menu-page-images/chiken-mendi/chiken-mendi-with-rice.jpg",
-    name:"Chicken Mendi",
-    description:"Fragrant basmati rice with tender chicken, slow-cooked with spices.",
-    priceCent:890,
-    quantity:1, 
-}]; 
 
-export function saveTolocalStorage(){
-  localStorage.setItem('cart',JSON.stringify(cart));
-}
+
+
+export let cart = JSON.parse(localStorage.getItem('cart'));
+
+if (!cart){
+    cart =  cart =[{
+    id:1,
+    quantity:1
+},{
+    id:2,
+    quantity:1
+}]
+};
+function saveToStorage(){
+    localStorage.setItem('cart', JSON.stringify(cart));
+};
+
 export function addToCart(foodId){
-    let machingFood;
+    let machingFood = null;
     cart.forEach((food)=>{
-        if (food.id === foodId){
+        if (foodId === food.id){
             machingFood = food;
         };
     });
@@ -27,9 +32,13 @@ export function addToCart(foodId){
             quantity: 1,
         });
     }
-    console.log(cart);  
+    saveToStorage();
+   
 };
+   console.log(cart);
 
+
+/*
 function generateCart(){
     let cartList = '';
     cart.forEach((CartFood)=>{
@@ -49,7 +58,7 @@ generateCart();
     return machingFood;
 }
 console.log(cart);
-/*
+
 export function generateCart(){
     let cartList = '';
     let emtyCart = '';
