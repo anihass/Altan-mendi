@@ -1,7 +1,5 @@
 import { foods } from "./data/foods.js";
 
-
-
 export let cart = JSON.parse(localStorage.getItem('cart'));
 
 if (!cart){
@@ -36,6 +34,18 @@ export function addToCart(foodId){
    
 };
    console.log(cart);
+
+export function deleteFromCart(foodId){
+    let newcart = [];
+    cart.forEach((food)=>{
+        if (food.id !== foodId){
+            newcart.push(food);
+        }
+    });
+    cart = newcart;
+    saveToStorage();
+    
+}
 
 
 /*
