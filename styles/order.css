@@ -197,6 +197,10 @@
   transform: translateY(-2px);
    transition: all 0.3s ease;
 }
+.quantity {
+  font-weight: 600;
+  color: #d97706;
+}
 
 
 /* Responsive Design */

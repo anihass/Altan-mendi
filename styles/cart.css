@@ -327,23 +327,14 @@
   margin-bottom: 12px;
 }
 
-.btn-checkout {
+.btn-order-now {
   background-color: #d97706;
   color: white;
 }
 
-.btn-checkout:hover {
+.btn-order-now:hover {
   background-color: #b45309;
   transform: translateY(-2px);
-}
-
-.btn-clear {
-  background-color: #ef4444;
-  color: white;
-}
-
-.btn-clear:hover {
-  background-color: #dc2626;
 }
 
 .btn-primary {

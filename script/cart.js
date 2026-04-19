@@ -47,7 +47,20 @@ export function deleteFromCart(foodId){
     
 }
 
-
+export function updateCartPrice(foodId){
+    let totalPrice = 0;
+    let machingFood = null;
+   cart.forEach((food)=>{
+        const foodId = food.id;
+        foods.forEach((foodinfo)=>{
+            if ( foodinfo.id === foodId){
+                machingFood = foodinfo;
+                totalPrice += (machingFood.priceCent * machingFood.quantity) / 100;
+            }
+        });  
+    });
+    return totalPrice;    
+};
 /*
 function generateCart(){
     let cartList = '';

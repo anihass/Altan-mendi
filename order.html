@@ -64,29 +64,7 @@
         <!-- LEFT SIDE: Cart Items -->
         <section class="cart-section">
             <h2 class="section-title">Your Order</h2>
-            
-            <div class="cart-items" id="cart-items">
-
-                <!-- Your Sample Food Card placed here -->
-                <div class="food-card">
-                    <div class="food-image">
-                        <img src="images/menu-page-images/chiken-mendi/chiken-mendi-with-rice.jpg" 
-                             alt="Chicken Mendi">
-                    </div>
-                    <div class="food-info">
-                        <h3 class="food-name" id="chiken">Chicken Mendi</h3>
-                        <p class="food-description">Fragrant basmati rice with tender chicken, slow-cooked with spices.</p>
-                        <div class="food-price-add">
-                            <span class="food-price">$8.99</span>
-                            <button class="add-to-cart-btn">
-                                <span>Delete</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- More cart items will be added here dynamically by JavaScript later -->
-
+            <div class="cart-items js-cart-items">
             </div>
         </section>
 
@@ -96,7 +74,7 @@
                 <h3>Order Summary</h3>
                 
                 <div class="summary-row">
-                    <span>Subtotal</span>
+                    <span>Total</span>
                     <span id="subtotal">$0.00</span>
                 </div>
                 
@@ -125,6 +103,6 @@
 
     </div>
 </main>
-
+<script src="script/order-now.js" type="module"></script>
 </body>
 </html>
