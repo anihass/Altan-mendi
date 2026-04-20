@@ -6,6 +6,13 @@ import { updateCartPrice } from "./cart.js";
 function renderCartPage(){  
 
 let cartList = '';
+let orderSummary='';
+const subTotal = updateCartPrice();
+const deliveryFee = subTotal === 0 ? 0 : 4.99;
+const tax = subTotal * 0.15;
+const total = subTotal + deliveryFee + tax;
+
+
 
 
 cart.forEach((food)=>{
@@ -14,9 +21,10 @@ cart.forEach((food)=>{
     foods.forEach((foodinfo)=>{
         if ( foodinfo.id === foodId){
             machingFood = foodinfo;
-            console.log(machingFood);
         }
     });
+   
+
 
     cartList +=
     `
@@ -37,6 +45,40 @@ cart.forEach((food)=>{
     `
     ;
 });
+orderSummary = 
+        `
+         <div>
+                <h3>Order Summary</h3>
+                
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$${subTotal.toFixed(2)}</span>
+                </div>
+                
+                <div class="summary-row">
+                    <span>Delivery Fee</span>
+                    <span id="delivery-fee">$${deliveryFee.toFixed(2)}</span>
+                </div>
+                
+                <div class="summary-row">
+                    <span>Tax (15%)</span>
+                    <span id="tax">$${tax.toFixed(2)}</span>
+                </div>
+                
+                <hr class="summary-divider">
+                
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <span id="total">$${total.toFixed(2)}</span>
+                </div>
+
+                <button class="btn btn-primary calculate-btn" id="calculate-btn">
+                    Calculate & Proceed to Checkout
+                </button>
+              </div>
+        `
+
 document.querySelector('.js-cart-items').innerHTML = cartList;
+document.querySelector('.js-order-summary').innerHTML = orderSummary;
 }
 renderCartPage();

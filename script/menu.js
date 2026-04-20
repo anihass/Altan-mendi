@@ -25,8 +25,7 @@ let foodList = '';
 document.querySelector('.js-food-card').innerHTML = foodList;
 document.querySelectorAll('.add-to-cart-btn').forEach((button)=>{
     button.addEventListener('click', ()=>{
-        const foodId = button.dataset.foodId;
-        console.log(foodId);
+        const foodId = button.dataset.foodId;        
         addToCart(foodId);  
         updateCartPrice(foodId);
         const totalPrice = updateCartPrice(foodId);

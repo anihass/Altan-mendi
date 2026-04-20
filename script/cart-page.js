@@ -1,4 +1,4 @@
-import { addToCart,cart,deleteFromCart } from "./cart.js";
+import { addQuantity, addToCart,cart,deleteFromCart } from "./cart.js";
 import { foods } from "./data/foods.js";
 
 
@@ -14,8 +14,7 @@ cart.forEach((food)=>{
     let machingFood;
     foods.forEach((foodinfo)=>{
         if ( foodinfo.id === foodId){
-            machingFood = foodinfo;
-            console.log(machingFood);
+            machingFood = foodinfo;            
         }
     });
 
@@ -30,7 +29,9 @@ cart.forEach((food)=>{
                 <p class="food-description">${machingFood.description}</p>                        
                 <div class="food-price-add">
                     <span class="food-price">$${(machingFood.priceCent / 100).toFixed(2)}</span>
-                    <button class="add-quantity-btn">+1</button>                            
+                    <button class="add-quantity-btn js-add-quantity-btn" data-food-id="${foodId}">
+                        +1
+                    </button>
                     <button class="delete-from-cart-btn js-delete-from-cart-btn" data-food-id="${foodId}">
                         <span>Delete</span>
                     </button>
@@ -43,13 +44,19 @@ cart.forEach((food)=>{
 document.querySelector('.js-cart-items').innerHTML = cartList;
 document.querySelectorAll('.js-delete-from-cart-btn').forEach((button)=>{
     button.addEventListener('click', ()=>{
-        const foodId = button.dataset.foodId;
-        console.log(foodId);
+        const foodId = button.dataset.foodId;        
         deleteFromCart(foodId);    
         renderCartPage();
        
         });
     });
+document.querySelectorAll('.js-add-quantity-btn').forEach((button)=>{
+    button.addEventListener('click', ()=>{
+        const foodId = button.dataset.foodId;       
+        addQuantity(foodId);
+        renderCartPage();    
+    });
+}); 
 
-}
+};    
 renderCartPage();

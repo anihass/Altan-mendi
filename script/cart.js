@@ -32,8 +32,7 @@ export function addToCart(foodId){
     }
     saveToStorage();
    
-};
-   console.log(cart);
+};  
 
 export function deleteFromCart(foodId){
     let newcart = [];
@@ -55,12 +54,24 @@ export function updateCartPrice(foodId){
         foods.forEach((foodinfo)=>{
             if ( foodinfo.id === foodId){
                 machingFood = foodinfo;
-                totalPrice += (machingFood.priceCent * machingFood.quantity) / 100;
+                totalPrice += (machingFood.priceCent * food.quantity) / 100;
             }
         });  
     });
     return totalPrice;    
 };
+
+export function addQuantity(foodId) {
+    let newQuantity ;
+    cart.forEach((food) => {
+        if (food.id === foodId) {
+            food.quantity += 1; 
+            console.log(food.quantity)  // increment the cart item quantity
+        }
+    });
+    saveToStorage();
+    
+}
 /*
 function generateCart(){
     let cartList = '';
