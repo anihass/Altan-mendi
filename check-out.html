@@ -67,7 +67,7 @@
       <section class="order-items-section">
         <h2 class="section-title">Your Order</h2>
         
-        <div class="order-items" id="order-items">
+        <div class="order-items js-order-items" id="order-items">
 
           <!-- Example Product (using your previous food-card style) -->
           <div class="food-card checkout-card">
@@ -92,39 +92,12 @@
 
       <!-- RIGHT SIDE: Success / Confirmation Box -->
       <aside class="confirmation-section">
-        <div class="confirmation-box">
-          
-          <!-- Green Checkmark Circle -->
-          <div class="success-icon">
-            <div class="check-circle">
-              <span class="checkmark">✓</span>
-            </div>
-          </div>
-
-          <h2 class="success-title">Order Placed Successfully!</h2>
-          <p class="success-message">
-            Thank you for ordering from Altan Mandi.<br>
-            Your food is being prepared.
-          </p>
-
-          <!-- Order Summary in confirmation box -->
-          <div class="mini-summary">
-            <div class="summary-row">
-              <span>Total Amount</span>
-              <span class="total-amount">$27.98</span>
-            </div>
-          </div>
-
-          <!-- Cancel Order Button -->
-          <button class="btn btn-cancel" id="cancel-order-btn">
-            Cancel Order
-          </button>
-
-        </div>
+        <div class="js-confirmation-box"></div>
+        
       </aside>
 
     </div>
   </main>
-
+<script src="script/check-out.js" type="module"></script>
 </body>
 </html>

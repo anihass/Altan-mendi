@@ -1,4 +1,4 @@
-import { addToCart, updateCartPrice } from "./cart.js";
+import { addToCart, updateCartPrice,updateCartIcon } from "./cart.js";
 import { foods } from "./data/foods.js";   
 let foodList = '';
 
@@ -28,6 +28,7 @@ document.querySelectorAll('.add-to-cart-btn').forEach((button)=>{
         const foodId = button.dataset.foodId;        
         addToCart(foodId);  
         updateCartPrice(foodId);
+        updateCartIcon();   
         const totalPrice = updateCartPrice(foodId);
         console.log((totalPrice.toFixed(2)));
         

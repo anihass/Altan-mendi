@@ -71,10 +71,12 @@ orderSummary =
                     <span>Total</span>
                     <span id="total">$${total.toFixed(2)}</span>
                 </div>
-
+                <a href="check-out.html">
                 <button class="btn btn-primary calculate-btn" id="calculate-btn">
                     Calculate & Proceed to Checkout
                 </button>
+                </a>
+                
               </div>
         `
 
