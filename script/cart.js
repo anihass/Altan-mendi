@@ -72,10 +72,12 @@ export function addQuantity(foodId) {
     saveToStorage();
     
 };
- let cartNumber = 0;
+
 export function updateCartIcon(){
-    cartNumber += 1;
-    saveToStorage();
-    console.log(cartNumber);
+    let cartNumber = 0;
+    cart.forEach((food) =>{
+        cartNumber += food.quantity;
+    });
+    document.querySelector('.js-cart-count').innerHTML = cartNumber;
     return cartNumber;
 }

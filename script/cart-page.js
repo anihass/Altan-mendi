@@ -9,7 +9,7 @@ function renderCartPage(){
 let cartList = '';
 let orderSummary='';
 let headerSummary='';
-let iconNumber = updateCartIcon();
+
 
 
 cart.forEach((food)=>{
@@ -76,7 +76,7 @@ cart.forEach((food)=>{
             <svg xmlns="http://www.w3.org/2000/svg" class="cart-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
-            <span id="cart-count" class="cart-count js-cart-count">0</span>
+            <span id="cart-count" class="cart-count js-cart-count"></span>
             </a>
 
             <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
@@ -105,6 +105,6 @@ document.querySelectorAll('.js-add-quantity-btn').forEach((button)=>{
     });
 }); 
 document.querySelector('.js-navbar').innerHTML = headerSummary;
-
+updateCartIcon();
 };    
 renderCartPage();
