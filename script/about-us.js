@@ -1,12 +1,9 @@
-import { foods } from "./data/foods.js";    
-import {cart,updateCartIcon} from "./cart.js"
+import { updateCartIcon } from "./cart.js";
 
-let headrSummary = '';
-
-headrSummary +=`
+let headerummary = '';
+headerummary += `
 <div class="nav-container">
-      
-      <!-- Logo - Moved more to the left -->
+      <!-- Logo -->
       <div class="logo">
         <img src="images/main-page-images/Altan-mendi-logo.jpg" alt="Altan Mendi Logo" class="logo-img">
         <div class="logo-text">
@@ -15,49 +12,38 @@ headrSummary +=`
         </div>
       </div>
 
-      <!-- Search Bar - In the middle -->
+      <!-- Search Bar -->
       <div class="search-container">
         <input type="text" id="search-input" class="search-bar" placeholder="Search menu (e.g. Chicken Mendi, Beef...)">
-        <button class="search-btn">
-          🔍
-        </button>
+        <button class="search-btn">🔍</button>
       </div>
 
       <!-- Menu Links -->
       <div class="nav-links">
-        <a href="altan-main.html" class="nav-link active">Home</a>
+        <a href="altan-main.html" class="nav-link">Home</a>
         <a href="menu.html" class="nav-link">Menu</a>
         <a href="order.html" class="nav-link highlight">Order Now</a>
-        <a href="about-us.html" class="nav-link">About Us</a>
+        <a href="about-us.html" class="nav-link active">About Us</a>
         <a href="check-out.html" class="nav-link">Check out</a>
       </div>
 
       <!-- Right Side -->
       <div class="nav-right">
-        <!-- Cart Icon with Number -->
         <a href="cart.html" class="cart-link" title="View Cart">
           <svg xmlns="http://www.w3.org/2000/svg" class="cart-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
-            <path stroke-linecap="round" stroke-linejoin="round" 
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
-          <span id="cart-count" class="cart-count js-cart-count"></span>
+          <span id="cart-count" class="cart-count js-cart-count">0</span>
         </a>
 
-        <!-- Theme Toggle -->
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
           <span id="theme-icon">☀️</span>
         </button>
 
-        <!-- Mobile Menu Button -->
         <button id="mobile-menu-btn" class="mobile-menu-btn">☰</button>
       </div>
     </div>
-`
-document.querySelector('.js-navbar').innerHTML = headrSummary;
+`;
+
+document.querySelector('.js-navbar').innerHTML =  headerummary;
 updateCartIcon();
-
-
-
-
-
-
